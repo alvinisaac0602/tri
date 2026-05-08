@@ -69,7 +69,7 @@ function App() {
             <li><a href="#clients">Clientele</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <button className="cta-button nav-cta">Connect With Us</button>
+          <a href="#contact" className="cta-button nav-cta">Connect With Us</a>
         </div>
       </nav>
 

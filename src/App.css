@@ -901,3 +901,53 @@
   .timeline-item, .timeline-item.reverse { padding-left: 50px; padding-right: 0; justify-content: flex-start; }
   .timeline-item:not(.reverse) .timeline-content, .timeline-item.reverse .timeline-content { margin-left: 0; margin-right: 0; width: 100%; }
 }
+
+/* CTA Buttons */
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: none;
+}
+
+.cta-button.primary {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.cta-button.primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.cta-button.secondary:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-cta:hover {
+  background: var(--secondary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+

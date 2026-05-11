@@ -2,39 +2,6 @@
   width: 100%;
 }
 
-/* Top Bar */
-.top-bar {
-  background: var(--primary);
-  color: var(--white);
-  padding: 0.75rem 0;
-  font-size: 0.85rem;
-}
-
-.top-bar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contact-info {
-  display: flex;
-  gap: 2rem;
-}
-
-.top-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.top-links a {
-  opacity: 0.7;
-  font-weight: 500;
-}
-
-.top-links a:hover {
-  opacity: 1;
-}
-
 /* Navbar */
 .navbar {
   position: sticky;
@@ -445,7 +412,7 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links, .top-bar { display: none; }
+  .nav-links { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 

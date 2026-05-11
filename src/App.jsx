@@ -24,20 +24,6 @@ function App() {
 
   return (
     <div className="app">
-      {/* Top Bar */}
-      <div className="top-bar">
-        <div className="container top-bar-content">
-          <div className="contact-info">
-            <span>📧 contact@tiplinfra.com</span>
-            <span>📍 Gaya, Bihar | India | Uganda</span>
-          </div>
-          <div className="top-links">
-            <a href="#">Financials</a>
-            <a href="#">Media Center</a>
-            <a href="#">Careers</a>
-          </div>
-        </div>
-      </div>
 
       {/* Navbar */}
       <nav className="navbar">
@@ -57,12 +43,14 @@ function App() {
               </div>
             </li>
             <li className="dropdown">
-              <a href="#services">Expertise</a>
+              <a href="#services">Business Units</a>
               <div className="dropdown-content">
-                <a href="#solar-epc">Solar EPC Projects</a>
-                <a href="#power-epc">Power T&D EPC</a>
-                <a href="#om-services">O&M Services</a>
-                <a href="#hse">Health & Safety (HSE)</a>
+                <a href="#power-epc">Power Transmission & Distribution</a>
+                <a href="#solar-epc">Solar PV Projects</a>
+                <a href="#om-services">Operation & Maintenance Services</a>
+                <a href="#it-solutions">IT & IT Enabled Solutions</a>
+                <a href="#hardware-supply">T&D Line Hardware, Fitting & Accessories</a>
+
               </div>
             </li>
             <li><a href="#portfolio">Projects</a></li>
@@ -78,7 +66,7 @@ function App() {
         <div className="container hero-content reveal">
           <span className="badge">Leading EPC Solutions Provider</span>
           <h1>Empowering Progress Through <span className="highlight">Engineering Excellence</span></h1>
-          <p>Triyambake Infra Pvt. Ltd. delivers end-to-end EPC solutions across India and Africa, specializing in power transmission and sustainable infrastructure.</p>
+          <p>Triyambake delivers end-to-end EPC solutions across India and Africa, specializing in power transmission and sustainable infrastructure.</p>
           <div className="hero-actions">
             <a href="#services" className="cta-button primary">Explore Solutions</a>
             <a href="#portfolio" className="cta-button secondary">Our Impact</a>
@@ -109,10 +97,10 @@ function App() {
         <div className="container">
           <div className="about-grid">
             <div className="about-text reveal">
-              <h2 className="section-title">Who We Are</h2>
-              <p>Triyambake Infra Pvt. Ltd. is an emerging Engineering, Procurement, and Construction (EPC) company operating in the power and infrastructure sector, with a growing footprint across India and Africa.</p>
+              <h2 className="section-title">COMPANY</h2>
+              <p>Triyambake is an emerging Engineering, Procurement, and Construction (EPC) company operating in the power and infrastructure sector, with a growing footprint across India and Africa.</p>
               <p>Founded and managed by engineers with extensive on-ground execution experience, the company is built on strong technical foundations, disciplined project management, and adaptability to diverse terrains and operating environments.</p>
-              <p>From feasibility studies and system design to procurement, construction, commissioning, and long-term operations, Triyambake Infra delivers end-to-end EPC solutions aligned with sustainable development and energy access goals.</p>
+              <p>From feasibility studies and system design to procurement, construction, commissioning, and long-term operations, Triyambake delivers end-to-end EPC solutions aligned with sustainable development and energy access goals.</p>
               <div className="stats-grid">
                 <div className="stat-item">
                   <span className="stat-number">100+</span>
@@ -147,7 +135,7 @@ function App() {
           </div>
           <div className="leadership-content reveal">
             <div className="leadership-main">
-              <p>Triyambake Infra Pvt. Ltd. is led by a team of experienced professionals with strong backgrounds in power transmission, renewable energy, EPC project execution, and international infrastructure development.</p>
+              <p>Triyambake is led by a team of experienced professionals with strong backgrounds in power transmission, renewable energy, EPC project execution, and international infrastructure development.</p>
               <p>The leadership team brings together engineering expertise, project management discipline, and cross-border execution experience, enabling the company to deliver complex infrastructure projects across diverse terrains and regulatory environments.</p>
             </div>
 
@@ -183,7 +171,7 @@ function App() {
           <div className="section-header reveal">
             <span className="badge">Quality Assurance</span>
             <h2 className="section-title center">Compliance & Certifications</h2>
-            <p className="section-subtitle center">Triyambake Infra is committed to maintaining the highest international standards in quality, safety, and environmental management.</p>
+            <p className="section-subtitle center">Triyambake is committed to maintaining the highest international standards in quality, safety, and environmental management.</p>
           </div>
 
           <div className="cert-grid reveal">
@@ -217,7 +205,7 @@ function App() {
         <div className="container">
           <div className="section-header reveal">
             <h2 className="section-title center">Business Units</h2>
-            <p className="section-subtitle center">Triyambake Infra operates through four strategic business verticals.</p>
+            <p className="section-subtitle center">Triyambake operates through four strategic business verticals.</p>
           </div>
           <div className="business-units-intro reveal">
             <p>Each business unit is supported by in-house engineering, procurement, quality control, and project management teams, ensuring seamless coordination and execution.</p>
@@ -254,7 +242,7 @@ function App() {
             <div className="detailed-content reveal">
               <span className="badge">Renewable Energy</span>
               <h2 className="section-title">SOLAR EPC PROJECTS</h2>
-              <p>Triyambake Infra provides complete Solar EPC solutions, delivering projects from concept to commissioning and long-term operation.</p>
+              <p>Triyambake provides complete Solar EPC solutions, delivering projects from concept to commissioning and long-term operation.</p>
               <p>Solar power enhances energy economics while reducing environmental impact, and our technical expertise ensures optimized plant performance.</p>
 
               <div className="expertise-categories">
@@ -303,7 +291,7 @@ function App() {
             <div className="detailed-content reveal">
               <span className="badge">Infrastructure</span>
               <h2 className="section-title">POWER TRANSMISSION & DISTRIBUTION (T&D) EPC</h2>
-              <p>Triyambake Infra delivers comprehensive Transmission & Distribution EPC solutions covering the full project lifecycle.</p>
+              <p>Triyambake delivers comprehensive Transmission & Distribution EPC solutions covering the full project lifecycle.</p>
 
               <div className="expertise-categories">
                 <div className="expertise-cat">
@@ -350,7 +338,7 @@ function App() {
             <div className="detailed-content reveal">
               <span className="badge">Operational Excellence</span>
               <h2 className="section-title">OPERATION & MAINTENANCE (O&M) SERVICES</h2>
-              <p>Triyambake Infra offers comprehensive O&M services to ensure safe, reliable, and continuous power delivery.</p>
+              <p>Triyambake offers comprehensive O&M services to ensure safe, reliable, and continuous power delivery.</p>
 
               <div className="expertise-categories">
                 <div className="expertise-cat">
@@ -397,7 +385,7 @@ function App() {
           </div>
 
           <div className="hse-intro reveal white-text">
-            <p>Triyambake Infra Pvt. Ltd. maintains a strong commitment to health, safety, and environmental protection across all project sites and operations.</p>
+            <p>Triyambake maintains a strong commitment to health, safety, and environmental protection across all project sites and operations.</p>
           </div>
 
           <div className="hse-grid reveal">
@@ -452,46 +440,46 @@ function App() {
           </div>
 
           <div className="experience-content reveal">
-            <p className="experience-intro">Triyambake Infra has successfully executed power transmission, solar EPC, and industrial infrastructure projects, including 33kV HT transmission lines, LV & MV power systems, and manufacturing machinery.</p>
+            <p className="experience-intro">Triyambake has successfully executed power transmission, solar EPC, and industrial infrastructure projects, including 33kV HT transmission lines, LV & MV power systems, and manufacturing machinery.</p>
           </div>
 
           {/* Timeline / Track Record */}
           <div className="timeline-container reveal">
             <h3 className="timeline-title">Track Record</h3>
             <div className="timeline">
-              <TimelineItem 
-                year="2025 - 2026" 
-                value="USD 760,060.84" 
+              <TimelineItem
+                year="2025 - 2026"
+                value="USD 760,060.84"
                 tasks={[
                   "Design, Supply & Installation of 64 km of 33kV HT Power Line Hardware",
                   "Supply, Installation & Training of Industrial Machinery for Transformer Manufacturing Plant",
                   "Supply of Clean Energy Cooking Equipment"
-                ]} 
+                ]}
               />
-              <TimelineItem 
-                year="2024 - 2025" 
-                value="USD 297,456" 
+              <TimelineItem
+                year="2024 - 2025"
+                value="USD 297,456"
                 tasks={[
                   "Design, Supply & Installation of 32 km of 33kV HT Power Line Equipment",
                   "Supply, Installation & Training of Industrial Manufacturing Machinery"
-                ]} 
+                ]}
                 reverse
               />
-              <TimelineItem 
-                year="2022 - 2023" 
-                value="USD 221,088" 
+              <TimelineItem
+                year="2022 - 2023"
+                value="USD 221,088"
                 tasks={[
                   "Design, Supply & Installation of LV & MV Line Materials for 33kV Power Networks",
                   "Supply, Installation & Training of Paver Block, Cement Concrete Brick & Industrial Machinery"
-                ]} 
+                ]}
               />
-              <TimelineItem 
-                year="2021 - 2022" 
-                value="USD 126,969" 
+              <TimelineItem
+                year="2021 - 2022"
+                value="USD 126,969"
                 tasks={[
                   "Design & Supply of LV Line Materials for 33kV Dedicated Evacuation Line",
                   "(Kinyara-Hoima Line under UMEME Project)"
-                ]} 
+                ]}
                 reverse
               />
             </div>
@@ -571,7 +559,7 @@ function App() {
               </ul>
             </div>
             <div className="footer-links-group">
-              <h4>Expertise</h4>
+              <h4>Business Units</h4>
               <ul>
                 <li><a href="#solar-epc">Solar EPC Projects</a></li>
                 <li><a href="#power-epc">Power T&D EPC</a></li>
@@ -583,12 +571,12 @@ function App() {
               <h4>Get In Touch</h4>
               <p>📧 contact@tiplinfra.com</p>
               <p>🌐 www.triyambake.com</p>
-              <p className="presence">India | Uganda | Eastern Africa</p>
+              <p className="presence">NEW DELHI | INDIA</p>
             </div>
           </div>
           <div className="footer-bottom">
             <div className="footer-bottom-content">
-              <p>&copy; {new Date().getFullYear()} Triyambake Infrastructure Private Limited.</p>
+              <p>&copy; 2019 Triyambake</p>
               <div className="legal-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>

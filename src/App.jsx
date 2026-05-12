@@ -1,13 +1,41 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import logo from './assets/logo.png'
-import heroBg from './assets/hero-bg.png'
+import heroBg from './assets/hero-composite.png'
 import projSolar from './assets/project-solar.png'
 import projTransformer from './assets/project-transformer.png'
 import projLines from './assets/project-lines.png'
+import itSolutions from './assets/it-solutions.png'
+import hardwareSupply from './assets/hardware-supply.png'
+import logoECI from './assets/clients/eci.png'
+import logoGov from './assets/clients/govt_india.png'
+import logoKinyara from './assets/Kinyara Sugar.png'
+import logoHoima from './assets/Hoima sugar.jpg'
+import logoASVT from './assets/Asvt_Logo.png'
+import logoIITD from './assets/IIT Dehli.png'
+import logoASI from './assets/Archaeological_Survey_of_India.png'
+import logoUltimate from './assets/ultimate clean energies.jpeg'
+import logoMRF from './assets/MRF-Logo.png'
+import logoNoida from './assets/Noida Special Economic Zone.jpg'
+import logoSTPI from './assets/Software_Technology_Parks_of_India_logo (1).jpg'
+import logoCalderys from './assets/Calderys.png'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
+
+// Page Imports
+import AboutPage from './pages/About'
+import BusinessPage from './pages/Business'
+import ProjectsPage from './pages/Projects'
+import ClientelePage from './pages/Clientele'
+import ContactPage from './pages/Contact'
 
 function App() {
   const [activeTab, setActiveTab] = useState('Gov');
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const observerOptions = { threshold: 0.1 };
@@ -20,7 +48,7 @@ function App() {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="app">
@@ -29,38 +57,104 @@ function App() {
       <nav className="navbar">
         <div className="container nav-content">
           <div className="logo-container">
-            <img src={logo} alt="Triyambake Logo" className="nav-logo" />
+            <Link to="/"><img src={logo} alt="Triyambake Logo" className="nav-logo" /></Link>
           </div>
           <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><Link to="/">Home</Link></li>
             <li className="dropdown">
-              <a href="#about">About Us</a>
+              <Link to="/about">About Us</Link>
               <div className="dropdown-content">
-                <a href="#vision">Mission & Vision</a>
-                <a href="#leadership">Management</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#milestones">Milestones</a>
+                <a href="/about#vision">Mission & Vision</a>
+                <a href="/about#leadership">Management</a>
+                <a href="/about#certifications">Certifications</a>
+                <a href="/about#milestones">Milestones</a>
               </div>
             </li>
             <li className="dropdown">
-              <a href="#services">Business Units</a>
+              <Link to="/business">Business Units</Link>
               <div className="dropdown-content">
-                <a href="#power-epc">Power Transmission & Distribution</a>
-                <a href="#solar-epc">Solar PV Projects</a>
-                <a href="#om-services">Operation & Maintenance Services</a>
-                <a href="#it-solutions">IT & IT Enabled Solutions</a>
-                <a href="#hardware-supply">T&D Line Hardware, Fitting & Accessories</a>
-
+                <a href="/business#power-epc">Power Transmission & Distribution</a>
+                <a href="/business#solar-epc">Solar PV Projects</a>
+                <a href="/business#om-services">Operation & Maintenance Services</a>
+                <a href="/business#it-solutions">IT & IT Enabled Solutions</a>
+                <a href="/business#hardware-supply">T&D Line Hardware, Fitting & Accessories</a>
               </div>
             </li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#clients">Clientele</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/clientele">Clientele</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
-          <a href="#contact" className="cta-button nav-cta">Connect With Us</a>
+          <Link to="/contact" className="cta-button nav-cta">Connect With Us</Link>
         </div>
       </nav>
 
+      <Routes>
+        <Route path="/" element={<Home activeTab={activeTab} setActiveTab={setActiveTab} />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/business" element={<BusinessPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/clientele" element={<ClientelePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+
+      {/* Footer */}
+      <footer id="contact" className="footer">
+        <div className="container">
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <Link to="/"><img src={logo} alt="Logo" className="footer-logo" /></Link>
+              <p className="footer-tagline">Simple Impartial... Build the difference!</p>
+              <div className="footer-socials">
+                <a href="#" className="social-icon">IN</a>
+                <a href="#" className="social-icon">TW</a>
+                <a href="#" className="social-icon">FB</a>
+              </div>
+            </div>
+            <div className="footer-links-group">
+              <h4>Corporate</h4>
+              <ul>
+                <li><Link to="/about">About Triyambake</Link></li>
+                <li><a href="/about#vision">Mission & Vision</a></li>
+                <li><a href="/about#leadership">Management</a></li>
+                <li><Link to="/clientele">Clientele</Link></li>
+              </ul>
+            </div>
+            <div className="footer-links-group">
+              <h4>Business Units</h4>
+              <ul>
+                <li><a href="/business#solar-epc">Solar EPC Projects</a></li>
+                <li><a href="/business#power-epc">Power T&D EPC</a></li>
+                <li><a href="/business#om-services">O&M Services</a></li>
+                <li><a href="/business#it-solutions">IT Solutions</a></li>
+                <li><a href="/business#hardware-supply">Hardware & Fittings</a></li>
+                <li><a href="/business#hse">Safety & Environment</a></li>
+              </ul>
+            </div>
+            <div className="footer-contact-info">
+              <h4>Get In Touch</h4>
+              <p>📧 info@triyambake.com</p>
+              <p>🌐 www.triyambake.com</p>
+              <p className="presence">NEW DELHI | INDIA</p>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <div className="footer-bottom-content">
+              <p>&copy; 2019 Triyambake</p>
+              <div className="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+const Home = ({ activeTab, setActiveTab }) => {
+  return (
+    <>
       {/* Hero Section */}
       <header id="home" className="hero-section" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url(${heroBg})` }}>
         <div className="container hero-content reveal">
@@ -229,7 +323,7 @@ function App() {
             <ServiceCard
               title="Manufacturer & Exporter"
               desc="T&D Line, Hardware Fittings & Accessories ensuring quality supply chain integration."
-              link="#supply"
+              link="#hardware-supply"
             />
           </div>
         </div>
@@ -375,6 +469,92 @@ function App() {
         </div>
       </section>
 
+      {/* IT Solutions */}
+      <section id="it-solutions" className="section-padding it-detailed">
+        <div className="container">
+          <div className="detailed-grid reverse">
+            <div className="detailed-image reveal">
+              <img src={itSolutions} alt="IT Solutions" className="rounded-image" />
+            </div>
+            <div className="detailed-content reveal">
+              <span className="badge">Digital Transformation</span>
+              <h2 className="section-title">IT & IT ENABLED SOLUTIONS</h2>
+              <p>Triyambake provides cutting-edge IT solutions designed to optimize business processes and enhance operational efficiency through digital integration.</p>
+
+              <div className="expertise-categories">
+                <div className="expertise-cat">
+                  <h4>Enterprise Solutions</h4>
+                  <ul>
+                    <li>Custom ERP and CRM development</li>
+                    <li>Business process automation</li>
+                    <li>Digital workflow integration</li>
+                  </ul>
+                </div>
+                <div className="expertise-cat">
+                  <h4>Infrastructure & Cloud</h4>
+                  <ul>
+                    <li>Cloud migration and management</li>
+                    <li>Network security and infrastructure</li>
+                    <li>Managed IT services and support</li>
+                  </ul>
+                </div>
+                <div className="expertise-cat">
+                  <h4>Data & Intelligence</h4>
+                  <ul>
+                    <li>Data analytics and visualization</li>
+                    <li>Business intelligence reporting</li>
+                    <li>AI-driven process optimization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hardware Supply */}
+      <section id="hardware-supply" className="section-padding hardware-detailed surface-bg">
+        <div className="container">
+          <div className="detailed-grid">
+            <div className="detailed-content reveal">
+              <span className="badge">Manufacturing</span>
+              <h2 className="section-title">T&D LINE HARDWARE, FITTING & ACCESSORIES</h2>
+              <p>As a leading manufacturer and exporter, we provide high-precision hardware and fittings for power transmission and distribution lines, ensuring quality and durability.</p>
+
+              <div className="expertise-categories">
+                <div className="expertise-cat">
+                  <h4>Transmission Hardware</h4>
+                  <ul>
+                    <li>Suspension and tension clamps</li>
+                    <li>Vibration dampers and spacers</li>
+                    <li>Arcing horns and corona rings</li>
+                  </ul>
+                </div>
+                <div className="expertise-cat">
+                  <h4>Distribution Accessories</h4>
+                  <ul>
+                    <li>Pole top brackets and cross-arms</li>
+                    <li>Stay sets and earth rods</li>
+                    <li>PG clamps and connector fittings</li>
+                  </ul>
+                </div>
+                <div className="expertise-cat">
+                  <h4>Custom Engineering</h4>
+                  <ul>
+                    <li>Forging and casting solutions</li>
+                    <li>Hot-dip galvanizing services</li>
+                    <li>Design and testing of prototype fittings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="detailed-image reveal">
+              <img src={hardwareSupply} alt="Hardware Supply" className="rounded-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* HSE Section (Image 2) */}
       <section id="hse" className="section-padding hse-section dark-bg">
         <div className="container">
@@ -513,79 +693,30 @@ function App() {
             <button className={activeTab === 'Int' ? 'active' : ''} onClick={() => setActiveTab('Int')}>International</button>
           </div>
           <div className="tab-content reveal">
-            <ul className="client-list">
+            <div className="client-grid">
               {activeTab === 'Gov' && <>
-                <li>Election Commission of India</li>
-                <li>Software Technology Parks of India</li>
-                <li>IIT Delhi</li>
-                <li>Noida Special Economic Zone</li>
-                <li>Archaeological Survey of India</li>
+                <ClientCard logo={logoECI} name="Election Commission of India" />
+                <ClientCard logo={logoSTPI} name="Software Technology Parks of India" />
+                <ClientCard logo={logoIITD} name="IIT Delhi" />
+                <ClientCard logo={logoNoida} name="Noida Special Economic Zone" />
+                <ClientCard logo={logoASI} name="Archaeological Survey of India" />
               </>}
               {activeTab === 'Corp' && <>
-                <li>MRF</li>
-                <li>Calderys</li>
-                <li>ASWT Industries</li>
+                <ClientCard logo={logoMRF} name="MRF" />
+                <ClientCard logo={logoCalderys} name="Calderys" />
+                <ClientCard logo={logoASVT} name="ASWT Industries" />
               </>}
               {activeTab === 'Int' && <>
-                <li>Kinyara Sugar Limited</li>
-                <li>Hoima Sugar Limited</li>
-                <li>Nile Infratech Limited</li>
+                <ClientCard logo={logoKinyara} name="Kinyara Sugar Limited" />
+                <ClientCard logo={logoHoima} name="Hoima Sugar Limited" />
+                <ClientCard logo={logoUltimate} name="Ultimate Clean Energies Ltd" />
               </>}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contact" className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <img src={logo} alt="Logo" className="footer-logo" />
-              <p className="footer-tagline">Simple Impartial... Build the difference!</p>
-              <div className="footer-socials">
-                <a href="#" className="social-icon">IN</a>
-                <a href="#" className="social-icon">TW</a>
-                <a href="#" className="social-icon">FB</a>
-              </div>
-            </div>
-            <div className="footer-links-group">
-              <h4>Corporate</h4>
-              <ul>
-                <li><a href="#about">About Triyambake</a></li>
-                <li><a href="#vision">Mission & Vision</a></li>
-                <li><a href="#leadership">Management</a></li>
-                <li><a href="#clients">Clientele</a></li>
-              </ul>
-            </div>
-            <div className="footer-links-group">
-              <h4>Business Units</h4>
-              <ul>
-                <li><a href="#solar-epc">Solar EPC Projects</a></li>
-                <li><a href="#power-epc">Power T&D EPC</a></li>
-                <li><a href="#om-services">O&M Services</a></li>
-                <li><a href="#hse">Safety & Environment</a></li>
-              </ul>
-            </div>
-            <div className="footer-contact-info">
-              <h4>Get In Touch</h4>
-              <p>📧 contact@tiplinfra.com</p>
-              <p>🌐 www.triyambake.com</p>
-              <p className="presence">NEW DELHI | INDIA</p>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <div className="footer-bottom-content">
-              <p>&copy; 2019 Triyambake</p>
-              <div className="legal-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }
 
@@ -636,6 +767,13 @@ const TimelineItem = ({ year, value, tasks, reverse }) => (
         {tasks.map((task, i) => <li key={i}>{task}</li>)}
       </ul>
     </div>
+  </div>
+)
+
+const ClientCard = ({ logo, name }) => (
+  <div className="client-card">
+    {logo ? <img src={logo} alt={name} className="client-logo" /> : <div className="client-placeholder">🏢</div>}
+    <span className="client-name">{name}</span>
   </div>
 )
 

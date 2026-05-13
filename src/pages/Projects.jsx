@@ -36,7 +36,10 @@ const Projects = () => {
       {/* Page Header */}
       <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${heroBg})` }}>
         <div className="container">
-          <h1>Our <span className="highlight">Projects</span></h1>
+          <h1>
+            <span className="hero-light">Our</span>{' '}
+            <span className="highlight">Projects</span>
+          </h1>
           <p>A proven track record of engineering excellence across continents.</p>
         </div>
       </section>

@@ -77,7 +77,7 @@ function App() {
                 <a href="/business#solar-epc">Solar PV Projects</a>
                 <a href="/business#om-services">Operation & Maintenance Services</a>
                 <a href="/business#it-solutions">IT & IT Enabled Solutions</a>
-                <a href="/business#hardware-supply">T&D Line Hardware, Fitting & Accessories</a>
+                <a href="/business#hardware-supply">TriyaVolt</a>
               </div>
             </li>
             <li><Link to="/projects">Projects</Link></li>
@@ -519,7 +519,7 @@ const Home = ({ activeTab, setActiveTab }) => {
           {/* Header */}
           <div className="section-header reveal">
             <span className="badge">Manufacturing &amp; Export</span>
-            <h2 className="section-title center">T&amp;D LINE HARDWARE, FITTING &amp; ACCESSORIES</h2>
+            <h2 className="section-title center">TriyaVolts</h2>
             <p className="section-subtitle center">A leading manufacturer and exporter of overhead line hardware and accessories for the power sector — based in Delhi NCR, India. Exporting to Uganda, Kenya, Tanzania, Rwanda and Burundi.</p>
           </div>
 

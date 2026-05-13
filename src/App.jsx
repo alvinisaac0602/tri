@@ -156,7 +156,7 @@ const Home = ({ activeTab, setActiveTab }) => {
   return (
     <>
       {/* Hero Section */}
-      <header id="home" className="hero-section" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url(${heroBg})` }}>
+      <header id="home" className="hero-section" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url(${heroBg})` }}>
         <div className="container hero-content reveal">
           <span className="badge">Concept to commissioning</span>
           <h1>Empowering Progress Through <span className="highlight">Engineering Excellence</span></h1>

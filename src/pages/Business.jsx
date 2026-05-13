@@ -259,7 +259,7 @@ const Business = () => {
                     {/* Intro */}
                     <div className="section-header reveal">
                         <span className="badge">Manufacturing & Export</span>
-                        <h2 className="section-title center">T&amp;D LINE HARDWARE, FITTING &amp; ACCESSORIES</h2>
+                        <h2 className="section-title center">TriyaVolt</h2>
                         <p className="section-subtitle center">A leading manufacturer and exporter of precision T&amp;D line hardware, fittings and accessories for the power sector — headquartered in Delhi NCR, India.</p>
                     </div>
 

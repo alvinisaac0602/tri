@@ -519,7 +519,7 @@ const Home = ({ activeTab, setActiveTab }) => {
           {/* Header */}
           <div className="section-header reveal">
             <span className="badge">Manufacturing &amp; Export</span>
-            <h2 className="section-title center">TriyaVolts</h2>
+            <h2 className="section-title center">TriyaVolt</h2>
             <p className="section-subtitle center">A leading manufacturer and exporter of overhead line hardware and accessories for the power sector — based in Delhi NCR, India. Exporting to Uganda, Kenya, Tanzania, Rwanda and Burundi.</p>
           </div>
 

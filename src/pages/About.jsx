@@ -42,8 +42,8 @@ const About = () => {
   return (
     <div className="about-page">
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url(${heroBg})` }}>
-        <div className="container reveal">
+      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${heroBg})` }}>
+        <div className="container">
           <h1>About <span className="highlight">Triyambake</span></h1>
           <p>Engineers at heart, building infrastructure for the future.</p>
         </div>

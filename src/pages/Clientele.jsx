@@ -38,8 +38,8 @@ const Clientele = () => {
   return (
     <div className="clientele-page">
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url(${heroBg})` }}>
-        <div className="container reveal">
+      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${heroBg})` }}>
+        <div className="container">
           <h1>Our <span className="highlight">Clientele</span></h1>
           <p>Trusted by governments, global corporations, and industrial leaders.</p>
         </div>

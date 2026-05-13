@@ -18,8 +18,8 @@ const Contact = () => {
   return (
     <div className="contact-page">
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url(${heroBg})` }}>
-        <div className="container reveal">
+      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${heroBg})` }}>
+        <div className="container">
           <h1>Contact <span className="highlight">Us</span></h1>
           <p>Get in touch with our team for inquiries, partnerships, or project consultations.</p>
         </div>

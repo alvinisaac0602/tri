@@ -158,7 +158,7 @@ const Home = ({ activeTab, setActiveTab }) => {
       {/* Hero Section */}
       <header id="home" className="hero-section" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url(${heroBg})` }}>
         <div className="container hero-content reveal">
-          <span className="badge">Leading EPC Solutions Provider</span>
+          <span className="badge">Concept to commissioning</span>
           <h1>Empowering Progress Through <span className="highlight">Engineering Excellence</span></h1>
           <p>Triyambake delivers end-to-end EPC solutions across India and Africa, specializing in power transmission and sustainable infrastructure.</p>
           <div className="hero-actions">
@@ -515,43 +515,116 @@ const Home = ({ activeTab, setActiveTab }) => {
       {/* Hardware Supply */}
       <section id="hardware-supply" className="section-padding hardware-detailed surface-bg">
         <div className="container">
-          <div className="detailed-grid">
-            <div className="detailed-content reveal">
-              <span className="badge">Manufacturing</span>
-              <h2 className="section-title">T&D LINE HARDWARE, FITTING & ACCESSORIES</h2>
-              <p>As a leading manufacturer and exporter, we provide high-precision hardware and fittings for power transmission and distribution lines, ensuring quality and durability.</p>
 
-              <div className="expertise-categories">
-                <div className="expertise-cat">
-                  <h4>Transmission Hardware</h4>
-                  <ul>
-                    <li>Suspension and tension clamps</li>
-                    <li>Vibration dampers and spacers</li>
-                    <li>Arcing horns and corona rings</li>
-                  </ul>
+          {/* Header */}
+          <div className="section-header reveal">
+            <span className="badge">Manufacturing &amp; Export</span>
+            <h2 className="section-title center">T&amp;D LINE HARDWARE, FITTING &amp; ACCESSORIES</h2>
+            <p className="section-subtitle center">A leading manufacturer and exporter of overhead line hardware and accessories for the power sector — based in Delhi NCR, India. Exporting to Uganda, Kenya, Tanzania, Rwanda and Burundi.</p>
+          </div>
+
+          {/* Overview grid */}
+          <div className="detailed-grid reveal" style={{ marginBottom: '4rem' }}>
+            <div className="detailed-content">
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1.25rem' }}>About Our Manufacturing Division</h3>
+              <p style={{ marginBottom: '1rem' }}>We are among the foremost tension clamps manufacturers and exporters in India. Our product range includes AB cable accessories, Copper earthing electrode, D iron brackets, Guy Grip, HT Stay Set, Mild Steel Cross Arms, PG Clamps, Stainless Steel U bolts, suspension clamps, tension clamps and more.</p>
+              <p style={{ marginBottom: '1.5rem' }}>Established in 2019, Triyambake has been consistently doing business worth US$ 1 million annually. All products are duly tested and checked for quality before delivery.</p>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <span className="badge">ISO 9001:2015</span>
+                <span className="badge">ISO 14001:2015</span>
+                <span className="badge">ISO 45001:2018</span>
+              </div>
+            </div>
+            <div className="detailed-image">
+              <img src={hardwareSupply} alt="Hardware Supply" className="rounded-image" />
+            </div>
+          </div>
+
+          {/* Products grid */}
+          <div className="reveal" style={{ marginBottom: '3rem' }}>
+            <div className="hardware-products-grid">
+              <div className="hardware-product-card">
+                <div className="hardware-product-header">AB CABLE ACCESSORIES</div>
+                <div className="hardware-product-body">
+                  <table className="hardware-spec-table">
+                    <tbody>
+                      <tr><td>Material</td><td>Metal</td></tr>
+                      <tr><td>Thickness</td><td>Standard</td></tr>
+                      <tr><td>Application</td><td>Cable Use, Industrial</td></tr>
+                      <tr><td>Color</td><td>Silver</td></tr>
+                      <tr><td>Country of Origin</td><td>India</td></tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div className="expertise-cat">
-                  <h4>Distribution Accessories</h4>
-                  <ul>
-                    <li>Pole top brackets and cross-arms</li>
-                    <li>Stay sets and earth rods</li>
-                    <li>PG clamps and connector fittings</li>
-                  </ul>
+              </div>
+              <div className="hardware-product-card">
+                <div className="hardware-product-header">SUSPENSION CLAMP</div>
+                <div className="hardware-product-body">
+                  <table className="hardware-spec-table">
+                    <tbody>
+                      <tr><td>Material</td><td>Aluminium</td></tr>
+                      <tr><td>Application</td><td>Suspension Joining</td></tr>
+                      <tr><td>Weight</td><td>Vary as per sizes</td></tr>
+                      <tr><td>Grade</td><td>Industrial</td></tr>
+                      <tr><td>Feature</td><td>Easy to Fit, High Quality</td></tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div className="expertise-cat">
-                  <h4>Custom Engineering</h4>
-                  <ul>
-                    <li>Forging and casting solutions</li>
-                    <li>Hot-dip galvanizing services</li>
-                    <li>Design and testing of prototype fittings</li>
+              </div>
+              <div className="hardware-product-card">
+                <div className="hardware-product-header">FULL PRODUCT RANGE</div>
+                <div className="hardware-product-body">
+                  <ul className="hardware-range-list">
+                    <li>Pin Spindle for Pin Insulator</li>
+                    <li>Stay Set &amp; HT Stay Set</li>
+                    <li>Earth Rod &amp; Earthing Pipe</li>
+                    <li>Cross Arms &amp; Gantry Structures</li>
+                    <li>PG Clamps &amp; Connectors</li>
+                    <li>D Iron Clamps &amp; D Iron B Rackets</li>
+                    <li>Stainless Steel U Bolt</li>
+                    <li>Tension Clamp &amp; Guy Grip</li>
+                    <li>Copper Earthing Electrode</li>
+                    <li>Electrical Fittings &amp; Insulator Pin</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="detailed-image reveal">
-              <img src={hardwareSupply} alt="Hardware Supply" className="rounded-image" />
+          </div>
+
+          {/* ISO Certifications */}
+          <div className="reveal">
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '2rem', textAlign: 'center' }}>ISO Certifications</h3>
+            <div className="iso-grid">
+              <div className="iso-card">
+                <div className="iso-card-badge">ISO 9001:2015</div>
+                <h4>Quality Management System</h4>
+                <ul>
+                  <li>Insulators, Clamps, Connectors, Hardware &amp; Accessories for Conductor and Earth Wire</li>
+                  <li>Fittings for Distribution Line, Telecom, ABC &amp; Atlas Cable</li>
+                  <li>Certified by ICV Assessment Pvt. Ltd.</li>
+                </ul>
+              </div>
+              <div className="iso-card">
+                <div className="iso-card-badge">ISO 14001:2015</div>
+                <h4>Environmental Management System</h4>
+                <ul>
+                  <li>Covers full scope of manufacturing and supply operations</li>
+                  <li>Demonstrates commitment to environmental responsibility</li>
+                  <li>Certified by ICV Assessment Pvt. Ltd.</li>
+                </ul>
+              </div>
+              <div className="iso-card iso-card-accent">
+                <div className="iso-card-badge">ISO 45001:2018</div>
+                <h4>Occupational Health &amp; Safety</h4>
+                <ul>
+                  <li>Covers all manufacturing and operational activities</li>
+                  <li>Zero-harm commitment across the supply chain</li>
+                  <li>Certified by ICV Assessment Pvt. Ltd.</li>
+                </ul>
+              </div>
             </div>
           </div>
+
         </div>
       </section>
 

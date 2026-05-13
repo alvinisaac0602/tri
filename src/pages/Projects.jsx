@@ -34,8 +34,8 @@ const Projects = () => {
   return (
     <div className="projects-page">
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url(${heroBg})` }}>
-        <div className="container reveal">
+      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${heroBg})` }}>
+        <div className="container">
           <h1>Our <span className="highlight">Projects</span></h1>
           <p>A proven track record of engineering excellence across continents.</p>
         </div>

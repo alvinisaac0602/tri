@@ -77,7 +77,7 @@ function App() {
                 <a href="/business#solar-epc">Solar PV Projects</a>
                 <a href="/business#om-services">Operation & Maintenance Services</a>
                 <a href="/business#it-solutions">IT & IT Enabled Solutions</a>
-                <a href="/business#hardware-supply">TriyaVolt</a>
+                <a href="/business#hardware-supply">T&D Line Hardware, Fitting & Accessories</a>
               </div>
             </li>
             <li><Link to="/projects">Projects</Link></li>

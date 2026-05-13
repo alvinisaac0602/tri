@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import logo from './assets/logo.png'
-import heroBg from './assets/hero-composite.png'
+import heroBg from './assets/hero-bg-main.jpeg'
 import projSolar from './assets/project-solar.png'
 import projTransformer from './assets/project-transformer.png'
 import projLines from './assets/project-lines.png'
@@ -163,7 +163,7 @@ const Home = ({ activeTab, setActiveTab }) => {
           <p>Triyambake delivers end-to-end EPC solutions across India and Africa, specializing in power transmission and sustainable infrastructure.</p>
           <div className="hero-actions">
             <a href="#services" className="cta-button primary">Explore Solutions</a>
-            <a href="#portfolio" className="cta-button secondary">Our Impact</a>
+            <Link to="/contact" className="cta-button secondary">Connect With Us</Link>
           </div>
         </div>
       </header>

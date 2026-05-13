@@ -4,7 +4,7 @@ import projTransformer from '../assets/project-transformer.png'
 import projLines from '../assets/project-lines.png'
 import itSolutions from '../assets/it-solutions.png'
 import hardwareSupply from '../assets/hardware-supply.png'
-import heroBg from '../assets/hero-composite.png'
+import heroBg from '../assets/hero-bg-main.jpeg'
 
 const ServiceCard = ({ title, desc, link }) => (
     <a href={link} className="service-card reveal">

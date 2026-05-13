@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import projSolar from '../assets/project-solar.png'
 import projTransformer from '../assets/project-transformer.png'
 import projLines from '../assets/project-lines.png'
-import heroBg from '../assets/hero-composite.png'
+import heroBg from '../assets/hero-bg-main.jpeg'
 
 const TimelineItem = ({ year, value, tasks, reverse }) => (
   <div className={`timeline-item ${reverse ? 'reverse' : ''}`}>

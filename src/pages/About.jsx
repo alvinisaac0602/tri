@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import heroBg from '../assets/hero-composite.png'
+import heroBg from '../assets/hero-bg-main.jpeg'
 
 const CertCard = ({ title, subtitle, desc }) => (
   <div className="cert-card reveal">

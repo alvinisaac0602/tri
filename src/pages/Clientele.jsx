@@ -10,7 +10,7 @@ import logoMRF from '../assets/MRF-Logo.png'
 import logoNoida from '../assets/Noida Special Economic Zone.jpg'
 import logoSTPI from '../assets/Software_Technology_Parks_of_India_logo (1).jpg'
 import logoCalderys from '../assets/Calderys.png'
-import heroBg from '../assets/hero-composite.png'
+import heroBg from '../assets/hero-bg-main.jpeg'
 
 const ClientCard = ({ logo, name }) => (
   <div className="client-card">

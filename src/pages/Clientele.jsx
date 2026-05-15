@@ -10,6 +10,21 @@ import logoMRF from '../assets/MRF-Logo.png'
 import logoNoida from '../assets/Noida Special Economic Zone.jpg'
 import logoSTPI from '../assets/Software_Technology_Parks_of_India_logo (1).jpg'
 import logoCalderys from '../assets/Calderys.png'
+import logoAmrest from '../assets/Amrest inovative power solutions.jpeg'
+import logoJBVNL from '../assets/Jharkhand bijli Vitran Nigam ltd.jpeg'
+import logoKEC from '../assets/KEC.jpeg'
+import logoKalpataru from '../assets/Kalpataru Projects International LTD.jpeg'
+import logoKiryandongo from '../assets/Kiryandono Sugar.jpeg'
+import logoLT from '../assets/Larsen Turbo.jpeg'
+import logoTATA from '../assets/TATA.jpeg'
+import logoVoltas from '../assets/Voltas.jpeg'
+import logoPCI from '../assets/pci cables.jpeg'
+import logoASNT from '../assets/clients/asnt.png'
+import logoGovInd from '../assets/clients/govt_india.png'
+import logoHero from '../assets/hero.png'
+import logoLT2 from '../assets/LT.jpeg'
+import logoHoima2 from '../assets/clients/hoima.jpg'
+import logoKinyara2 from '../assets/clients/kinyara.png'
 import heroBg from '../assets/hero-bg-main.jpeg'
 
 const ClientCard = ({ logo, name }) => (
@@ -20,7 +35,6 @@ const ClientCard = ({ logo, name }) => (
 )
 
 const Clientele = () => {
-  const [activeTab, setActiveTab] = useState('Gov');
 
   useEffect(() => {
     const observerOptions = { threshold: 0.1 };
@@ -53,31 +67,34 @@ const Clientele = () => {
             <p className="section-subtitle center">Our multi-region experience allows us to serve diverse client needs with precision.</p>
           </div>
           
-          <div className="tabs reveal">
-            <button className={activeTab === 'Gov' ? 'active' : ''} onClick={() => setActiveTab('Gov')}>Government</button>
-            <button className={activeTab === 'Corp' ? 'active' : ''} onClick={() => setActiveTab('Corp')}>Industrial</button>
-            <button className={activeTab === 'Int' ? 'active' : ''} onClick={() => setActiveTab('Int')}>International</button>
-          </div>
-
           <div className="tab-content reveal">
             <div className="client-grid">
-              {activeTab === 'Gov' && <>
-                <ClientCard logo={logoECI} name="Election Commission of India" />
-                <ClientCard logo={logoSTPI} name="Software Technology Parks of India" />
-                <ClientCard logo={logoIITD} name="IIT Delhi" />
-                <ClientCard logo={logoNoida} name="Noida Special Economic Zone" />
-                <ClientCard logo={logoASI} name="Archaeological Survey of India" />
-              </>}
-              {activeTab === 'Corp' && <>
-                <ClientCard logo={logoMRF} name="MRF" />
-                <ClientCard logo={logoCalderys} name="Calderys" />
-                <ClientCard logo={logoASVT} name="ASWT Industries" />
-              </>}
-              {activeTab === 'Int' && <>
-                <ClientCard logo={logoKinyara} name="Kinyara Sugar Limited" />
-                <ClientCard logo={logoHoima} name="Hoima Sugar Limited" />
-                <ClientCard logo={logoUltimate} name="Ultimate Clean Energies Ltd" />
-              </>}
+              <ClientCard logo={logoECI} name="Election Commission of India" />
+              <ClientCard logo={logoSTPI} name="Software Technology Parks of India" />
+              <ClientCard logo={logoIITD} name="IIT Delhi" />
+              <ClientCard logo={logoNoida} name="Noida Special Economic Zone" />
+              <ClientCard logo={logoASI} name="Archaeological Survey of India" />
+              <ClientCard logo={logoMRF} name="MRF" />
+              <ClientCard logo={logoCalderys} name="Calderys" />
+              <ClientCard logo={logoASVT} name="ASWT Industries" />
+              <ClientCard logo={logoKinyara} name="Kinyara Sugar Limited" />
+              <ClientCard logo={logoHoima} name="Hoima Sugar Limited" />
+              <ClientCard logo={logoUltimate} name="Ultimate Clean Energies Ltd" />
+              <ClientCard logo={logoAmrest} name="Amrest Innovative Power Solutions" />
+              <ClientCard logo={logoJBVNL} name="JBVNL" />
+              <ClientCard logo={logoKEC} name="KEC International" />
+              <ClientCard logo={logoKalpataru} name="Kalpataru Projects International" />
+              <ClientCard logo={logoKiryandongo} name="Kiryandongo Sugar" />
+              <ClientCard logo={logoLT} name="Larsen & Toubro" />
+              <ClientCard logo={logoTATA} name="TATA" />
+              <ClientCard logo={logoVoltas} name="Voltas" />
+              <ClientCard logo={logoPCI} name="PCI Cables" />
+              <ClientCard logo={logoASNT} name="ASNT" />
+              <ClientCard logo={logoGovInd} name="Government of India" />
+              <ClientCard logo={logoHero} name="Hero" />
+              <ClientCard logo={logoLT2} name="L&T" />
+              <ClientCard logo={logoHoima2} name="Hoima Sugar" />
+              <ClientCard logo={logoKinyara2} name="Kinyara Sugar" />
             </div>
           </div>
         </div>

@@ -209,20 +209,7 @@ const Home = () => {
               <p>Triyambake is an emerging Engineering, Procurement, and Construction (EPC) company operating in the power and infrastructure sector, with a growing footprint across India and Africa.</p>
               <p>Founded and managed by engineers with extensive on-ground execution experience, the company is built on strong technical foundations, disciplined project management, and adaptability to diverse terrains and operating environments.</p>
               <p>From feasibility studies and system design to procurement, construction, commissioning, and long-term operations, Triyambake delivers end-to-end EPC solutions aligned with sustainable development and energy access goals.</p>
-              <div className="stats-grid">
-                <div className="stat-item">
-                  <span className="stat-number">100+</span>
-                  <span className="stat-label">MW Solar Installed</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">500+</span>
-                  <span className="stat-label">Km Transmission</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">2+</span>
-                  <span className="stat-label">Regions Served</span>
-                </div>
-              </div>
+              
             </div>
             <div className="about-image reveal">
               <div className="image-card">
@@ -693,7 +680,7 @@ const Home = () => {
 
           <div className="experience-stats-grid reveal">
             <div className="experience-stat-card">
-              <span className="stat-value">USD 1.4M+</span>
+              <span className="stat-value">USD 2.1M+</span>
               <span className="stat-desc">Total Project Value Executed</span>
             </div>
             <div className="experience-stat-card">
@@ -702,7 +689,7 @@ const Home = () => {
             </div>
             <div className="experience-stat-card">
               <span className="stat-value">International</span>
-              <span className="stat-desc">Execution in Uganda & Burundi</span>
+              <span className="stat-desc">Execution in Africa</span>
             </div>
           </div>
 

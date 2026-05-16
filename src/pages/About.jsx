@@ -76,20 +76,7 @@ const About = () => {
               <p>Triyambake is an emerging Engineering, Procurement, and Construction (EPC) company operating in the power and infrastructure sector, with a growing footprint across India and Africa.</p>
               <p>Founded and managed by engineers with extensive on-ground execution experience, the company is built on strong technical foundations, disciplined project management, and adaptability to diverse terrains and operating environments.</p>
               <p>From feasibility studies and system design to procurement, construction, commissioning, and long-term operations, Triyambake delivers end-to-end EPC solutions aligned with sustainable development and energy access goals.</p>
-              <div className="stats-grid">
-                <div className="stat-item">
-                  <span className="stat-number">100+</span>
-                  <span className="stat-label">MW Solar Installed</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">500+</span>
-                  <span className="stat-label">Km Transmission</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">2+</span>
-                  <span className="stat-label">Regions Served</span>
-                </div>
-              </div>
+             
             </div>
             <div className="about-image reveal">
               <div className="image-card">

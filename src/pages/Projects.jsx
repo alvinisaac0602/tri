@@ -55,7 +55,7 @@ const Projects = () => {
 
           <div className="experience-stats-grid reveal">
             <div className="experience-stat-card">
-              <span className="stat-value">USD 1.4M+</span>
+              <span className="stat-value">USD 2.1M+</span>
               <span className="stat-desc">Total Project Value Executed</span>
             </div>
             <div className="experience-stat-card">
@@ -64,7 +64,7 @@ const Projects = () => {
             </div>
             <div className="experience-stat-card">
               <span className="stat-value">International</span>
-              <span className="stat-desc">Execution in Uganda & Burundi</span>
+              <span className="stat-desc">Execution in Africa</span>
             </div>
           </div>
 

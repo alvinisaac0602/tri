@@ -1365,9 +1365,33 @@
   text-align: center;
 }
 
+/* Clientele Page Grid Layout */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .client-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .client-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .client-card {
-  flex-shrink: 0;
-  width: 220px;
   background: var(--white);
   padding: 2.5rem 2rem;
   border-radius: 20px;

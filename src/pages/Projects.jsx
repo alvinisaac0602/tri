@@ -34,15 +34,31 @@ const Projects = () => {
   return (
     <div className="projects-page">
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${heroBg})` }}>
-        <div className="container">
-          <h1>
-            <span className="hero-light">Our</span>{' '}
-            <span className="highlight">Projects</span>
-          </h1>
-          <p>A proven track record of engineering excellence across continents.</p>
-        </div>
-      </section>
+     {/* Page Header */}
+<section className="page-header-slider">
+  <div className="slider">
+    {[projLines, projTransformer, projSolar, heroBg].map((img, index) => (
+      <div
+        key={index}
+        className="slide"
+        style={{
+          backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url(${img})`,
+          animationDelay: `${index * 5}s`
+        }}
+      />
+    ))}
+  </div>
+
+  <div className="container hero-content">
+    <h1>
+      <span className="hero-light">Our</span>{' '}
+      <span className="highlight">Projects</span>
+    </h1>
+    <p>
+      A proven track record of engineering excellence across continents.
+    </p>
+  </div>
+</section>
 
       {/* Experience Stats */}
       <section className="section-padding portfolio-section">

@@ -35,6 +35,89 @@ import logoLT2 from './assets/LT.jpeg'
 import logoHoima2 from './assets/clients/hoima.jpg'
 import logoKinyara2 from './assets/clients/kinyara.png'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import img1 from './assets/bg-images/img1.jpeg'
+import img2 from './assets/bg-images/img2.jpeg'
+import img3 from './assets/bg-images/img3.jpeg'
+import img4 from './assets/bg-images/img4.jpeg'
+import img5 from './assets/bg-images/img5.jpeg'
+import img6 from './assets/bg-images/img6.jpeg'
+import img7 from './assets/bg-images/img7.jpeg'
+import img8 from './assets/bg-images/img8.jpeg'
+import img9 from './assets/bg-images/img9.jpeg'
+import img10 from './assets/bg-images/img10.jpeg'
+import img11 from './assets/bg-images/img11.jpeg'
+import img12 from './assets/bg-images/img12.jpeg'
+import img13 from './assets/bg-images/img13.jpeg'
+import img14 from './assets/bg-images/img14.jpeg'
+import img16 from './assets/bg-images/img16.jpeg'
+import img17 from './assets/bg-images/img17.jpeg'
+import img18 from './assets/bg-images/img18.jpeg'
+import img19 from './assets/bg-images/img19.jpeg'
+import img20 from './assets/bg-images/img20.jpeg'
+import img21 from './assets/bg-images/img21.jpeg'
+import img22 from './assets/bg-images/img22.jpeg'
+import img23 from './assets/bg-images/img23.jpeg'
+import img24 from './assets/bg-images/img24.jpeg'
+
+// Array of all client logos
+const clientLogos = [
+  { logo: logoECI, name: "Election Commission of India" },
+  { logo: logoSTPI, name: "Software Technology Parks of India" },
+  { logo: logoIITD, name: "IIT Delhi" },
+  { logo: logoNoida, name: "Noida Special Economic Zone" },
+  { logo: logoASI, name: "Archaeological Survey of India" },
+  { logo: logoMRF, name: "MRF" },
+  { logo: logoCalderys, name: "Calderys" },
+  { logo: logoASVT, name: "ASWT Industries" },
+  { logo: logoKinyara, name: "Kinyara Sugar Limited" },
+  { logo: logoHoima, name: "Hoima Sugar Limited" },
+  { logo: logoUltimate, name: "Ultimate Clean Energies Ltd" },
+  { logo: logoAmrest, name: "Amrest Innovative Power Solutions" },
+  { logo: logoJBVNL, name: "JBVNL" },
+  { logo: logoKEC, name: "KEC International" },
+  { logo: logoKalpataru, name: "Kalpataru Projects International" },
+  { logo: logoKiryandongo, name: "Kiryandongo Sugar" },
+  { logo: logoLT, name: "Larsen & Toubro" },
+  { logo: logoTATA, name: "TATA" },
+  { logo: logoVoltas, name: "Voltas" },
+  { logo: logoPCI, name: "PCI Cables" },
+  { logo: logoASNT, name: "ASNT" },
+  { logo: logoGovInd, name: "Government of India" },
+  { logo: logoHero, name: "Hero" },
+  { logo: logoLT2, name: "L&T" },
+  { logo: logoHoima2, name: "Hoima Sugar" },
+  { logo: logoKinyara2, name: "Kinyara Sugar" }
+];
+
+
+// Removed Swiper to use custom slider
+
+// Load all hero background images
+const heroImages = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
+  img16,
+  img17,
+  img18,
+  img19,
+  img20,
+  img21,
+  img22,
+  img23,
+  img24,
+];
 
 // Page Imports
 import AboutPage from './pages/About'
@@ -167,10 +250,38 @@ function App() {
 }
 
 const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
-      <header id="home" className="hero-section" style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url(${heroBg})` }}>
+      <header id="home" className="hero-section">
+        <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1 }}>
+          {heroImages.map((img, index) => (
+            <div
+              key={index}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url(${img})`,
+                opacity: currentSlide === index ? 1 : 0,
+                transition: 'opacity 1.5s ease-in-out',
+                zIndex: currentSlide === index ? 2 : 1
+              }}
+            />
+          ))}
+        </div>
         <div className="container hero-content reveal">
           <span className="badge">Concept to commissioning</span>
           <h1>Empowering Progress Through <span className="highlight">Engineering Excellence</span></h1>
@@ -762,33 +873,17 @@ const Home = () => {
             <p className="section-subtitle center">Trusted by leading government and industrial bodies.</p>
           </div>
           <div className="tab-content reveal">
-            <div className="client-grid">
-              <ClientCard logo={logoECI} name="Election Commission of India" />
-              <ClientCard logo={logoSTPI} name="Software Technology Parks of India" />
-              <ClientCard logo={logoIITD} name="IIT Delhi" />
-              <ClientCard logo={logoNoida} name="Noida Special Economic Zone" />
-              <ClientCard logo={logoASI} name="Archaeological Survey of India" />
-              <ClientCard logo={logoMRF} name="MRF" />
-              <ClientCard logo={logoCalderys} name="Calderys" />
-              <ClientCard logo={logoASVT} name="ASWT Industries" />
-              <ClientCard logo={logoKinyara} name="Kinyara Sugar Limited" />
-              <ClientCard logo={logoHoima} name="Hoima Sugar Limited" />
-              <ClientCard logo={logoUltimate} name="Ultimate Clean Energies Ltd" />
-              <ClientCard logo={logoAmrest} name="Amrest Innovative Power Solutions" />
-              <ClientCard logo={logoJBVNL} name="JBVNL" />
-              <ClientCard logo={logoKEC} name="KEC International" />
-              <ClientCard logo={logoKalpataru} name="Kalpataru Projects International" />
-              <ClientCard logo={logoKiryandongo} name="Kiryandongo Sugar" />
-              <ClientCard logo={logoLT} name="Larsen & Toubro" />
-              <ClientCard logo={logoTATA} name="TATA" />
-              <ClientCard logo={logoVoltas} name="Voltas" />
-              <ClientCard logo={logoPCI} name="PCI Cables" />
-              <ClientCard logo={logoASNT} name="ASNT" />
-              <ClientCard logo={logoGovInd} name="Government of India" />
-              <ClientCard logo={logoHero} name="Hero" />
-              <ClientCard logo={logoLT2} name="L&T" />
-              <ClientCard logo={logoHoima2} name="Hoima Sugar" />
-              <ClientCard logo={logoKinyara2} name="Kinyara Sugar" />
+            <div className="marquee-container">
+              <div className="marquee-group">
+                {clientLogos.map((client, index) => (
+                  <ClientTrainItem key={`group1-${index}`} logo={client.logo} name={client.name} />
+                ))}
+              </div>
+              <div className="marquee-group" aria-hidden="true">
+                {clientLogos.map((client, index) => (
+                  <ClientTrainItem key={`group2-${index}`} logo={client.logo} name={client.name} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -852,6 +947,12 @@ const ClientCard = ({ logo, name }) => (
   <div className="client-card">
     {logo ? <img src={logo} alt={name} className="client-logo" /> : <div className="client-placeholder">🏢</div>}
     <span className="client-name">{name}</span>
+  </div>
+)
+
+const ClientTrainItem = ({ logo, name }) => (
+  <div className="client-train-item">
+    {logo ? <img src={logo} alt={name} title={name} className="client-train-logo" /> : <span className="client-train-name">{name}</span>}
   </div>
 )
 
